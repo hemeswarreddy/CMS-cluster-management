@@ -1,1 +1,6 @@
-/* /index.html 200
+# Render Server-Side Reverse Proxy to AWS Application Load Balancer
+# Proxies /api/* requests from Render HTTPS to AWS ALB HTTP seamlessly without Mixed Content blocks
+/api/*  http://content-management-alb-941224789.eu-north-1.elb.amazonaws.com/api/:splat  200
+
+# Fallback all other routes to React SPA index.html
+/*      /index.html                                                                        200
